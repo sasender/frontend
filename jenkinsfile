@@ -1,4 +1,7 @@
- stages {
+pipeline{
+    agent any
+
+    stages {
 
         stage('prepare Artifacts') {
             steps {
@@ -11,7 +14,7 @@
         stage('upload Artifacts') {
             steps {
                 sh '''
-           curl -f -v -u admin:admin --upload-file frontend.zip http://10.1.2.210:8081/repository/frontend-todo//frontend.zip
+           curl -f -v -u admin:admin --upload-file frontend.zip http://10.1.2.210:8081/repository/frontend-todo/frontend.zip
         '''
             }
         }
