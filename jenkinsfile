@@ -2,7 +2,7 @@
 todoshop (
          COMPONENT             : 'frontend-todo',
          PROJECT_NAME          : "todoshop",
-         SLAVE_LABEL           : "NGINX",
+         SLAVE_LABEL           : "NODEJS",
          SKIP_NEXUS_UPLOAD     : false,
          APP_TYPE              : "NGINX"
 )
