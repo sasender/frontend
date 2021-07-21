@@ -1,0 +1,13 @@
+[Unit]
+Description=frontend service
+[Service]
+Type=simple
+Environment=AUTH_API_ADDRESS=http://login.kavya.website:8080
+Environment=TODOS_API_ADDRESS=http://todo.kavya.website:8080
+Restart=on-failure
+WorkingDirectory=/var/www/html/frontend
+ExecStart=npm start
+Restart=on-failure
+SyslogIdentifier=frontend
+[Install]
+WantedBy=multi-user.target
