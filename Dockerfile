@@ -1,5 +1,4 @@
 FROM      node:8-alpine AS builder
-RUN       apt-get update
 COPY       . ./frontend
 WORKDIR   /frontend
 RUN       npm install
